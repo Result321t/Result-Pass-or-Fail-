@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bishwah Giri School Exam result checker</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f8ff;
+      padding: 40px;
+      text-align: center;
+    }
+
+    input, button {
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bishwash Giri School Result Checker</h1>
+  <input type="number" id="marks" placeholder="Enter your marks">
+  <br>
+  <button onclick="checkResult()">Check Result</button>
+
+  <div id="result"></div>
+
+  <script>
+    function checkResult() {
+      let marks = parseInt(document.getElementById("marks").value);
+      let result = document.getElementById("result");
+
+      if (isNaN(marks)) {
+        result.innerHTML = "❗ Please enter a number!";
+      } else if (marks >= 35) {
+        result.innerHTML = "✅ You Pass the Exam<br>🎉 Congratulations!";
+      } else {
+        result.innerHTML = "❌ You Fail the Exam<br>💪 Find the River and jump but dont try to swim try to Drowned!";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
